@@ -27,6 +27,7 @@ import Paragraph from '@ckeditor/ckeditor5-paragraph/src/paragraph';
 import PasteFromOffice from '@ckeditor/ckeditor5-paste-from-office/src/pastefromoffice';
 import Table from '@ckeditor/ckeditor5-table/src/table';
 import TableToolbar from '@ckeditor/ckeditor5-table/src/tabletoolbar';
+import Emoji from '@wwalc/ckeditor5-emoji/src/emoji';
 
 export default class ClassicEditor extends ClassicEditorBase {}
 
@@ -52,7 +53,8 @@ ClassicEditor.builtinPlugins = [
 	Paragraph,
 	PasteFromOffice,
 	Table,
-	TableToolbar
+	TableToolbar,
+	Emoji
 ];
 
 // Editor configuration.
@@ -71,9 +73,18 @@ ClassicEditor.defaultConfig = {
 			'insertTable',
 			'mediaEmbed',
 			'undo',
-			'redo'
+			'redo',
+			'emoji'
 		]
 	},
+	emoji: [
+		{ name: 'smile', text: '😀' },
+		{ name: 'wink', text: '😉' },
+		{ name: 'cool', text: '😎' },
+		{ name: 'surprise', text: '😮' },
+		{ name: 'confusion', text: '😕' },
+		{ name: 'crying', text: '😢' }
+	],
 	image: {
 		toolbar: [
 			'imageStyle:full',

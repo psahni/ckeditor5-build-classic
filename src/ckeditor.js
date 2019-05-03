@@ -11,6 +11,7 @@ import UploadAdapter from '@ckeditor/ckeditor5-adapter-ckfinder/src/uploadadapte
 import Autoformat from '@ckeditor/ckeditor5-autoformat/src/autoformat';
 import Bold from '@ckeditor/ckeditor5-basic-styles/src/bold';
 import Italic from '@ckeditor/ckeditor5-basic-styles/src/italic';
+import Underline from '@ckeditor/ckeditor5-basic-styles/src/underline';
 import BlockQuote from '@ckeditor/ckeditor5-block-quote/src/blockquote';
 import CKFinder from '@ckeditor/ckeditor5-ckfinder/src/ckfinder';
 import EasyImage from '@ckeditor/ckeditor5-easy-image/src/easyimage';
@@ -28,6 +29,10 @@ import PasteFromOffice from '@ckeditor/ckeditor5-paste-from-office/src/pastefrom
 import Table from '@ckeditor/ckeditor5-table/src/table';
 import TableToolbar from '@ckeditor/ckeditor5-table/src/tabletoolbar';
 import Emoji from '@wwalc/ckeditor5-emoji/src/emoji';
+import Alignment from '@ckeditor/ckeditor5-alignment/src/alignment';
+import FontFamily from '@ckeditor/ckeditor5-font/src/fontfamily';
+import FontSize from '@ckeditor/ckeditor5-font/src/fontsize';
+import FontColor from '@ckeditor/ckeditor5-font/src/fontcolor';
 
 export default class ClassicEditor extends ClassicEditorBase {}
 
@@ -54,7 +59,12 @@ ClassicEditor.builtinPlugins = [
 	PasteFromOffice,
 	Table,
 	TableToolbar,
-	Emoji
+	Emoji,
+	Alignment,
+	Underline,
+	FontFamily,
+	FontSize,
+	FontColor
 ];
 
 // Editor configuration.
@@ -74,7 +84,12 @@ ClassicEditor.defaultConfig = {
 			'mediaEmbed',
 			'undo',
 			'redo',
-			'emoji'
+			'emoji',
+			'alignment',
+			'underline',
+			'fontFamily',
+			'fontSize',
+			'fontColor'
 		]
 	},
 	emoji: [

@@ -10,3 +10,6 @@
 module.exports = {
 	extends: 'ckeditor5'
 };
+
+
+/*eslint linebreak-style: ["error", "windows"]*/
